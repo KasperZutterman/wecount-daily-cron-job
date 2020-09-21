@@ -14,3 +14,8 @@ the cron job runs at 01:00, it iterates all active cameras for their daily traff
 The test.js script has the same code as the cron job and can be used to see if the code the cron job executes works. It can be run by ```node .\test.js```
 
 To load all historical data from the telraam API, you should run ```node .\history_data.js```, this iterates over all days (+-2 hours per day) and writes these to their corresponding json file.
+
+## TODO / optimalisations
+- Convert hardcoded params and paths in a .properties file
+- The [wecount-daily-cron-job](https://github.com/KasperZutterman/wecount-daily-cron-job) files folder should be the same as this files folder.
+- Tweak the timeout intervals to not overload the telraam API.
