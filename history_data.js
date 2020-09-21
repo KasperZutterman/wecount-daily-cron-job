@@ -22,6 +22,7 @@ while (date_counter < date_end) {
 
 let index = 0;
 
+// Iterate all dates and fill the coresponding json file (same request as daily cron job)
 var interval = setIntervalAsync(async () => {
     console.log(date_array[index]);
     await script.get_daily_observations(date_array[index].toISOString());
