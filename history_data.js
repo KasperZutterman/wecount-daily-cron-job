@@ -4,7 +4,10 @@ const { setIntervalAsync } = require('set-interval-async/dynamic')
 const { clearIntervalAsync } = require('set-interval-async/dynamic')
 
 const start_date = "2019-05-20"
-const time_out = 1000 * 60 // * 60 * 2; // ms * sec * min * h
+const time_out = 1000 * 60 * 60 * 2; // ms * sec * min * h // time interval between request for 1 day
+/*
+    The request for 1 whole day to finish takes about 1.5 - 2 hours
+*/
 
 console.log("filling historical data");
 let date_start = moment(start_date).tz("Europe/Brussels").utcOffset(0).set({'h':0, 'm':0, 's':0, 'ms':0})//.subtract(1, 'days')//.toDate();
@@ -33,8 +36,3 @@ var interval = setIntervalAsync(async () => {
     index++;
 
 }, time_out);
-
-
-
-//console.log(date_array)
-//script.get_daily_observations(date.toISOString());
