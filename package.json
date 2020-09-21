@@ -1,0 +1,22 @@
+{
+  "name": "wecount-daily-cron-job",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.28.0",
+    "moment-timezone": "^0.5.31",
+    "momentjs": "^2.0.0",
+    "node-cron": "^2.0.3",
+    "s": "^1.0.0",
+    "set-interval-async": "1.0.33",
+    "unirest": "^0.6.0",
+    "wkt": "^0.1.1"
+  }
+}
